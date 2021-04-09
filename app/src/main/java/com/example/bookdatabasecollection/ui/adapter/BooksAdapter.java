@@ -34,8 +34,8 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BooksViewHol
 
         holder.title.setText("Title: "+book.getTitle());
         holder.datePublished.setText("Published: "+book.getPublishedDate());
-        holder.authorName.setText("Author: "+book.getAuthor().getName());
-        holder.authorBirthday.setText("Author Birthday: "+book.getAuthor().getBirthday());
+        holder.authorName.setText("Author: "+book.getAuthorEntity().getName());
+        holder.authorBirthday.setText("Author Birthday: "+book.getAuthorEntity().getBirthday());
         holder.url.setText("URL: "+book.getUrl());
     }
 
@@ -61,8 +61,6 @@ public class BooksAdapter extends RecyclerView.Adapter<BooksAdapter.BooksViewHol
             authorName = itemView.findViewById(R.id.author_name_tv);
             authorBirthday = itemView.findViewById(R.id.author_birthday_tv);
             url = itemView.findViewById(R.id.url_tv);
-            title.setPadding(0, 20,0,0);
-            url.setPadding(0,0,0,20);
         }
 
         @Override

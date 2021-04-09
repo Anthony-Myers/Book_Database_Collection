@@ -16,7 +16,7 @@ public abstract class BookDao {
     @Query("SELECT * FROM books")
     public abstract LiveData<List<BookEntity>> getBooks();
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     public abstract void insertBook(BookEntity book);
 
     @Query("DELETE FROM books")

@@ -1,10 +1,17 @@
 package com.example.bookdatabasecollection.ui.data.entities;
 
-public class Author {
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+
+@Entity
+public class AuthorEntity {
+    @ColumnInfo
     private String name;
+
+    @ColumnInfo
     private String birthday;
 
-    public Author(String name, String birthday){
+    public AuthorEntity(String name, String birthday){
         this.name = name;
         this.birthday = birthday;
     }

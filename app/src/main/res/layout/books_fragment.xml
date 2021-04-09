@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/ic_baseline_android_24_dark"
             android:layout_gravity="bottom"
-            android:layout_marginEnd="20dp"/>
+            android:layout_marginEnd="@dimen/margin_header_image"/>
 
         <TextView
             android:id="@+id/books_tv"
@@ -28,14 +28,14 @@
             android:text="@string/books"
             android:textAppearance="?textAppearanceHeadline3"
             android:fontFamily="@font/olde_english"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="@dimen/text_margin_padding" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_baseline_android_24_dark"
             android:layout_gravity="bottom"
-            android:layout_marginStart="20dp"/>
+            android:layout_marginStart="@dimen/margin_header_image"/>
 
     </LinearLayout>
 

@@ -1,33 +1,24 @@
 package com.example.bookdatabasecollection.ui;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.bookdatabasecollection.R;
 import com.example.bookdatabasecollection.databinding.BooksFragmentBinding;
 import com.example.bookdatabasecollection.ui.adapter.BooksAdapter;
-import com.example.bookdatabasecollection.ui.data.BookRepository;
-import com.example.bookdatabasecollection.ui.data.entities.Author;
-import com.example.bookdatabasecollection.ui.data.entities.BookEntity;
-
-import java.util.List;
 
 public class BooksFragment extends Fragment {
 

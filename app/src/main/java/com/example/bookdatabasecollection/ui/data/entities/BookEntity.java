@@ -20,7 +20,7 @@ public class BookEntity {
     private String publishedDate;
 
     @Embedded
-    private Author author;
+    private AuthorEntity authorEntity;
 
     @ColumnInfo
     private String url;
@@ -33,9 +33,9 @@ public class BookEntity {
 
     public void setPublishedDate(String publishedDate){this.publishedDate = publishedDate;}
 
-    public Author getAuthor(){return author;}
+    public AuthorEntity getAuthorEntity(){return authorEntity;}
 
-    public void setAuthor(Author author){this.author = author;}
+    public void setAuthorEntity(AuthorEntity authorEntity){this.authorEntity = authorEntity;}
 
     public String getUrl(){return url;}
 
@@ -48,13 +48,13 @@ public class BookEntity {
         BookEntity that = (BookEntity) o;
         return title.equals(that.title) &&
                 publishedDate.equals(that.publishedDate) &&
-                author.equals(that.author) &&
+                authorEntity.equals(that.authorEntity) &&
                 url.equals(that.url);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, publishedDate, author, url);
+        return Objects.hash(title, publishedDate, authorEntity, url);
     }
 
     @Override
@@ -62,7 +62,7 @@ public class BookEntity {
         return "BookEntity{" +
                 "title='" + title + '\'' +
                 ", publishedDate='" + publishedDate + '\'' +
-                ", author=" + author.getName() +
+                ", author=" + authorEntity +
                 ", url='" + url + '\'' +
                 '}';
     }
